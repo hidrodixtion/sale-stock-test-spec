@@ -32,8 +32,8 @@ Scenario('test login', (I) => {
   // Should see kata sandi warning
   I.see("Kata Sandi wajib diisi ya Sis :)")
 
-  var username = "hidrodixtion@yahoo.com";
-  var password = "123456";
+  let username = "hidrodixtion@yahoo.com";
+  let password = "123456";
 
   // Fill username
   I.fillField("#username", username);
@@ -82,10 +82,4 @@ Scenario('test login', (I) => {
 
   // Should see profile menu
   I.see("Profil");
-
-  // I.click("//button[@data-qa-id='qa_buy_button']")
-
-
-  // I.seeElement("//button[contains('gevinnia-color-block-collar-muslim')]");
-
 });
