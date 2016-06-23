@@ -15,8 +15,11 @@ Scenario('test login', (I) => {
   // Click on "Masuk" button
   I.click("//a[@data-qa-id='qa_login_hamburger_menu_button']");
 
+  I.wait(3)
+
   // Should be redirected to https://www.salestockindonesia.com/account/login?redirectTo=%2F
-  I.amOnPage("/account/login?redirectTo=%2F");
+  I.seeCurrentUrlEquals("/account/login?redirectTo=%2F");
+  I.see("Masuk atau Daftar Member");
 
   // I.wait(2)
 
@@ -58,6 +61,27 @@ Scenario('test login', (I) => {
 
   // Should see username warning
   I.see("Telepon atau Email wajib diisi ya Sis :)");
+
+  // Fill the username
+  I.fillField("#username", username);
+
+  // Fill the password
+  I.fillField("#password", password);
+
+  // Click on "Masuk Member" button
+  I.click("//input[@data-qa-id='qa_login_member_button']");
+
+  I.wait(3)
+
+  // should be redirectedTo https://www.salestockindonesia.com/?login=1
+  I.seeCurrentUrlEquals("/?login=1");
+  I.see("Selamat datang Kembali Sista!");
+
+  // Open hamburger menu
+  I.click("//a[@type='link']");
+
+  // Should see profile menu
+  I.see("Profil");
 
   // I.click("//button[@data-qa-id='qa_buy_button']")
 
