@@ -1,7 +1,7 @@
 # SaleStock Test Spec
 Test Spec and Automation Test for SaleStock
 
-__[Spec Document]__(https://docs.google.com/spreadsheets/d/1TfsajdmmgPS0lO3U2Zk-hB1GkZt3k2DaV8HiSRA-fdM/edit?usp=sharing)
+[__Spec Document__](https://docs.google.com/spreadsheets/d/1TfsajdmmgPS0lO3U2Zk-hB1GkZt3k2DaV8HiSRA-fdM/edit?usp=sharing)
 
 ###How to run :
 
