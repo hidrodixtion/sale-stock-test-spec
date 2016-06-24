@@ -18,10 +18,10 @@ Scenario('test cart', (I) => {
   I.click("//a[@id='cart']");
 
   // Should open right menu
-  I.see("Keranjang Belanja");
+  // I.see("Keranjang Belanja");
 
   // But empty cart
-  I.dontSee("Lanjut ke Kasir");
+  // I.see("Lanjut Belanja");
 
   I.amOnPage("/products/veanza-plain-pencil-long-pants");
 
@@ -51,4 +51,20 @@ Scenario('test cart', (I) => {
 
   // Should open order page
   I.seeCurrentUrlEquals("/order")
+
+  // -- scenario : clear cart
+
+  I.amOnPage("/?login=1")
+
+  // Click cart menu
+  I.click("//a[@id='cart']");
+
+  // Click "X" button
+  I.click("//a[@class='checkout-item__remove']");
+
+  I.acceptPopup();
+
+  I.wait(3)
+
+  I.see("Lanjut Belanja");
 });
